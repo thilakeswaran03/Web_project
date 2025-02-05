@@ -34,8 +34,8 @@ SHEET_MAPPINGS = {
     }
 }
 
-EXCEL_PATH = 'C:/Users/admin/web-5/data/updateddata3.xlsx'
-MLDATA_PATH = 'C:/Users/admin/web-5/data/mldata.xlsx'  # Ensure correct path
+EXCEL_PATH = 'C:/Users/admin/web-7/data/updateddata3.xlsx'
+MLDATA_PATH = 'C:/Users/admin/web-7/data/mldata.xlsx'  # Ensure correct path
 
 # Utility Functions
 def get_student_year(admission_year):
