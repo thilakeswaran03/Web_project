@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Blurred Panel -->
+        <div class="left-panel">
+            <h1>SAVEETHA ENGINEERING COLLEGE</h1>
+            <p>Saveetha Consortium of Future Technology (SCoFT) presents</p>
+        </div>
+
+        <!-- Right Panel with Buttons -->
+        <div class="right-panel">
+            <button onclick="location.href='{{ url_for('online_courses.online_courses') }}'">Online Courses</button>
+            <button onclick="location.href='{{ url_for('credit_details.credit_details') }}'">Credit Details</button>
+            <button onclick="location.href='{{ url_for('blended_courses.blended_courses') }}'">Blended Courses</button>
+        </div>
+    </div>
+</body>
+</html>

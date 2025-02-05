@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses Eligibility</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/online_courses.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SCoFT</h1>
+        <div class="header">
+            <p>Check Your Course Eligibility</p>
+        </div>
+    </header>
+    <main>
+        <form id="eligibilityForm">
+            <!-- Register Number Input -->
+            <section class="input-section">
+                <label for="registerNumber">Register Number:</label>
+                <input type="text" id="registerNumber" placeholder="Enter your 12-digit register number">
+                <p id="error" class="error-message"></p>
+            </section>
+
+            <!-- Details Container -->
+            <div id="detailsContainer" class="details-container hidden">
+                <!-- Student Details -->
+                <section class="details-section">
+                    <h2>Student Details</h2>
+                    <div class="details-grid">
+                        <p><strong>Register Number:</strong> <span id="studentRegNo"></span></p>
+                        <p><strong>Department:</strong> <span id="studentDepartment"></span></p>
+                        <p><strong>Year:</strong> <span id="studentYear"></span></p>
+                        <p><strong>Regulation:</strong> <span id="studentRegulation"></span></p>
+                    </div>
+                </section>
+
+                <!-- Course Search -->
+                <section class="course-search-section">
+                    <label for="courseName">Course Name:</label>
+                    <input type="text" id="courseName" placeholder="Search course name" autocomplete="off">
+                    <ul id="suggestionsList" class="suggestion hidden"></ul>
+                </section>
+
+                <!-- Course Details -->
+                <section id="courseDetails" class="course-details-section hidden">
+                    <h3>Course Details</h3>
+                    <div class="details-grid">
+                        <p><strong>Course Name:</strong> <span id="course_name"></span></p>
+                        <p><strong>Platform:</strong> <span id="platform"></span></p>
+                        <p><strong>Course Code R2019:</strong> <span id="course_code_R2019"></span></p>
+                        <p><strong>Course Code R2024:</strong> <span id="course_code_R2024"></span></p>
+                        <p><strong>Credits:</strong> <span id="credits"></span></p>
+                        <p><strong>Duration:</strong> <span id="duration"></span></p>
+                        <p><strong>Link:</strong> <a id="link" href="#" target="_blank" class="course-link">View Course</a></p>
+                    </div>
+                </section>
+
+                <!-- Eligibility Check -->
+                <div class="eligibility-section">
+                    <button type="button" id="checkEligibilityButton">Check Eligibility</button>
+                    <p id="eligibilityResult"></p>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/online_courses.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("../images/purple.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.details-container {
+    margin-top: 20px;
+}
+
+.details-section, .course-details-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.details-section h2, .course-details-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.details-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.details-grid p {
+    margin: 0;
+}
+
+.course-search-section {
+    position: relative;
+    margin: 20px 0;
+}
+
+.suggestion {
+    position: absolute;
+    width: calc(100% - 2px);
+    left: 1px;
+    top: calc(100% + 10px);
+    list-style: none;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* Calculate height for exactly 4 items (48px per item + padding) */
+    max-height: calc(4 * 42px);
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: float-in 0.3s ease-out;
+}
+
+@keyframes float-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.suggestion li {
+    height: 42px; /* Fixed height for each item */
+    padding: 12px 15px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    background: rgba(31, 38, 135, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.95rem;
+    /* Ensure text aligns vertically */
+    display: flex;
+    align-items: center;
+}
+
+.suggestion li:last-child {
+    border-bottom: none;
+}
+
+.suggestion li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
+}
+
+/* Scrollbar Styling */
+.suggestion::-webkit-scrollbar {
+    width: 8px;
+}
+
+.suggestion::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.suggestion::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+
+.suggestion::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.eligibility-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#eligibilityResult {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.error-message {
+    color: #ff6b6b;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.course-link {
+    color: #81D4FA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-link:hover {
+    color: #4FC3F7;
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+    }
+    
+    main {
+        width: 95%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .suggestion {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    form {
+        padding: 15px;
+    }
+    
+    .details-section, .course-details-section {
+        padding: 15px;
+    }
+
+    .suggestion {
+        max-height: 180px;
+    }
+}
