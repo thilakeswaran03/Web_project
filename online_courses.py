@@ -35,7 +35,9 @@ SHEET_MAPPINGS = {
 }
 
 EXCEL_PATH = 'C:/Users/admin/web-7/data/updateddata3.xlsx'
-MLDATA_PATH = 'C:/Users/admin/web-7/data/mldata.xlsx'  # Ensure correct path
+MLDATA_PATH = "C:/Users/admin/web-7/data/mldata.xlsx"
+if not os.path.exists(MLDATA_PATH):
+    print("[ERROR] Excel file not found:", MLDATA_PATH)
 
 # Utility Functions
 def get_student_year(admission_year):
