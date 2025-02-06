@@ -34,7 +34,7 @@ SHEET_MAPPINGS = {
     }
 }
 
-EXCEL_PATH = 'C:/Users/admin/web-7/data/updateddata3.xlsx'
+EXCEL_PATH = os.path.join(os.getcwd(), "data", "updateddata3.xlsx")
 MLDATA_PATH = os.path.join(os.getcwd(), "data", "mldata.xlsx")
 print("Loading file from:", MLDATA_PATH)
 
