@@ -11,10 +11,11 @@ body {
     background: url("../images/purple.jpeg") no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 10px;
 }
 
 /* Main Container */
@@ -91,26 +92,61 @@ body {
     .container {
         flex-direction: column;
         align-items: center;
+        width: 95%;
     }
 
-    .left-panel, .right-panel {
-        width: 90%;
-        margin-bottom: 1.5rem;
+    .left-panel {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .left-panel h1 {
+        font-size: 2rem;
+        margin: 10% 0;
+    }
+
+    .right-panel {
+        width: 100%;
+        gap: 1rem;
     }
 
     .right-panel button {
         font-size: 1.2rem;
-        padding: 1rem;
+        padding: 0.8rem;
     }
 }
 
+/* Mobile-Specific Adjustments */
 @media (max-width: 480px) {
-    .left-panel h1 {
-        font-size: 1.5rem;
+    .container {
+        width: 100%;
+        padding: 10px;
     }
-    
+
+    .left-panel {
+        padding: 1.5rem;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .left-panel h1 {
+        font-size: 1.8rem;
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+
+    .right-panel {
+        width: 100%;
+        gap: 0.8rem;
+    }
+
     .right-panel button {
         font-size: 1rem;
-        padding: 0.8rem;
+        padding: 0.7rem;
+    }
+
+    .center-text {
+        font-size: 1rem;
     }
 }
