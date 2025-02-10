@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/credit_details.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SCoFT</h1>
+        <div class="header">
+            <p>Check Credit Details</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="input-container">
+            <input type="text" id="reg_no" placeholder="Enter Register Number">
+            <button onclick="fetchCreditDetails()">Check</button>
+        </div>
+
+        <div id="student-info" class="info-box"></div>
+        <div id="credit-summary" class="info-box"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/credit_details.js') }}"></script>
+</body>
+</html>

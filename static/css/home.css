@@ -92,30 +92,19 @@ body {
     .container {
         flex-direction: column;
         align-items: center;
-        width: 95%;
     }
 
-    .left-panel {
-        width: 100%;
-        height: auto;
-        padding: 2rem;
-    }
-
-    .left-panel h1 {
-        font-size: 2rem;
-        margin: 10% 0;
-    }
-
-    .right-panel {
-        width: 100%;
-        gap: 1rem;
+    .left-panel, .right-panel {
+        width: 90%;
+        margin-bottom: 1.5rem;
     }
 
     .right-panel button {
         font-size: 1.2rem;
-        padding: 0.8rem;
+        padding: 1rem;
     }
 }
+
 
 /* Mobile-Specific Adjustments */
 @media (max-width: 480px) {
