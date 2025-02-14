@@ -152,7 +152,7 @@ input:focus {
     cursor: pointer;
     color: white;
     transition: all 0.3s ease;
-    background: rgba(31, 38, 135, 0.15);
+    background: rgba(44, 42, 42, 0.955);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 0.95rem;
     /* Ensure text aligns vertically */
@@ -165,7 +165,7 @@ input:focus {
 }
 
 .suggestion li:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.911);
     transform: scale(1.02);
 }
 

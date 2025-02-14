@@ -197,6 +197,10 @@ def credit_details():
         student_credit_info = get_student_credit_info(reg_no, student_info["department_code"])
         total_credit_info = get_total_credit_info(student_info["department_code"], int(reg_no[4:6]))
         completed_courses = student_credit_info["completed_courses"] if student_credit_info else {}
+        
+        # If student data is not found, return an error response
+        if student_credit_info is None:
+            return jsonify({"error": "No data found for the entered register number. please check your register number"}), 404
 
         return jsonify({
             "student_info": student_info,
