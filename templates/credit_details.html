@@ -9,18 +9,21 @@
 <body>
     <header>
         <h1>SCoFT</h1>
-        <div class="header">
-            <p>Check Credit Details</p>
-        </div>
+        <p>Check Credit Details</p>
     </header>
+
     <div class="container">
         <div class="input-container">
-            <input type="text" id="reg_no" placeholder="Enter Register Number">
-            <button onclick="fetchCreditDetails()">Check</button>
+            <input type="text" id="reg_no" placeholder="Enter Register Number" aria-label="Register Number">
+            <button onclick="fetchCreditDetails()" aria-label="Check Credit Details">Check</button>
         </div>
+
+        <div id="loading-spinner" class="spinner"></div> <!-- Loading Spinner -->
 
         <div id="student-info" class="info-box"></div>
         <div id="credit-summary" class="info-box"></div>
+        <div id="completed-courses" class="info-box"></div>
+
     </div>
 
     <script src="{{ url_for('static', filename='js/credit_details.js') }}"></script>

@@ -8,10 +8,10 @@
 
 /* Full-page Background */
 body {
-    background: url("../images/purple.jpeg") no-repeat center center fixed;
+    background: url("../images/forest.jpeg") no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -31,7 +31,7 @@ body {
 .left-panel {
     width: 85vb;
     height: 98vh;
-    background: rgba(0, 50, 0, 0.5);
+    background: rgba(55, 69, 55, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 4rem;
