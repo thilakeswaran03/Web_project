@@ -8,7 +8,7 @@
 
 /* Full-page Background */
 body {
-    background: url("../images/forest.jpeg") no-repeat center center fixed;
+    background: url("../images/purple.jpeg") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: space-between;
