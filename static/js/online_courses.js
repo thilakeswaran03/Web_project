@@ -84,7 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     const displayCourseDetails = (data) => {
         eligibilityResultElement.classList.remove("hidden");
-        eligibilityResultElement.textContent = `Eligibility: ${data.eligibility}`;
+        //eligibilityResultElement.textContent = `Eligibility: ${data.eligibility}`;
+        if (data.eligibility === "Not Eligible") {
+            eligibilityResultElement.textContent = `${"This is your professional core. you are not suggested to enroll this course. (Credits will not be added in your account"})`;
+        } else{
+            eligibilityResultElement.textContent = `${"you can enroll this course"}`;
+        }
         eligibilityResultElement.style.color = data.eligibility.includes("Not Eligible") ? "red" : "green";
     
         if (data.eligibility === "Eligible") {
